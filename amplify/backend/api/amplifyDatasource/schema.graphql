@@ -1,0 +1,51 @@
+type Teachers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  email: AWSEmail!
+  pass: String
+}
+
+type Students @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  standard: String!
+  section: String!
+  email: AWSEmail!
+  password: String!
+}
+
+type Assignments @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  subject: String!
+  url: AWSURL!
+  timestamp: AWSDateTime!
+  standard: String!
+  section: String!
+}
+
+type Notes @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  subject: String!
+  url: AWSURL!
+  timestamp: AWSDateTime!
+  standard: String!
+  sectio: String!
+}
+
+type Videos @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  subject: String!
+  url: AWSURL!
+  timestamp: AWSDateTime!
+  standard: String!
+  section: String!
+}
+
+type Homework @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  subject: String!
+  title: String!
+  timestamp: AWSDateTime!
+  standard: String!
+  section: String!
+}
